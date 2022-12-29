@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 20:56:34 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 09:26:01 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:07:54 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_memmove(void *dest, void *src, unsigned int n)
 {
-	int				i;
+	unsigned int				i;
 
 	if (!dest || n == 0)
 		return ;
@@ -29,10 +29,10 @@ void	ft_memmove(void *dest, void *src, unsigned int n)
 	}
 	else
 	{
-		i = n - 1;
-		while (i >= 0)
+		i = n;
+		while (i >= 1)
 		{
-			((char *)dest)[i] = ((char *)src)[i];
+			((char *)dest)[i - 1] = ((char *)src)[i - 1];
 			i--;
 		}
 	}
