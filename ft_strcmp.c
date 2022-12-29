@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 
-int	get_str_size(char *str)
+static int	get_str_size(char *str)
 {
 	int	size;
 
