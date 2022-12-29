@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 15:41:08 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:47:11 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void			ft_bzero(void *s, int n);
 void			*ft_memset(void *s, int c, int n);
 void			ft_memcpy(void *dest, void *src, unsigned int n);
 void			ft_memmove(void *dest, void *src, unsigned int n);
+int				ft_memcmp(const void *s1, const void *s2, unsigned int n);
 int				toupper(int c);
 #endif
