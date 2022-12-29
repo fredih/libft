@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 14:50:55 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:04:05 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char			*ft_strrchr(const char *s, int c);
 int				ft_strcmp(char *s1, char *s2);
 unsigned long	ft_strlcat(char *dest, char *src, unsigned int destsize);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n);
-void			*ft_bzero(void *s, int n);
+void			ft_bzero(void *s, int n);
 void			*ft_memset(void *s, int c, int n);
 void			ft_memcpy(void *dest, void *src, unsigned int n);
 void			ft_memmove(void *dest, void *src, unsigned int n);

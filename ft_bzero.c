@@ -6,13 +6,13 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 20:24:05 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 09:42:12 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 15:04:26 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	bzero(void *s, int n)
+void	ft_bzero(void *s, int n)
 {
-	return (ft_memset(s, 0, n));
+	ft_memset(s, 0, n);
 }
