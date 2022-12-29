@@ -6,11 +6,11 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 14:23:31 by aantonio          #+#    #+#             */
-/*   Updated: 2022/08/15 14:26:34 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 10:07:06 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	length;
 
