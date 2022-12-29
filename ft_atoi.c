@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 16:03:50 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 17:39:18 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 17:54:03 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,21 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
+int	getsign(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (!('0' <= str[i] && str[i] <= '9'))
+	{
+		i++;
+	}
+	if (str[i] == '-')
+		return (-1);
+	else
+		return (1);
+}
+
 int	ft_atoi(const char *str)
 {
 	int		i;
@@ -71,6 +86,8 @@ int	ft_atoi(const char *str)
 	{
 		i++;
 	}
+	if (str[i] == '-' || str[i] == '+')
+		i++;
 	start = str + i;
 	i++;
 	while ('0' <= str[i] && str[i] <= '9')
@@ -80,5 +97,5 @@ int	ft_atoi(const char *str)
 	end = str + i;
 	pwr = pwr10((int)(end - start - 1));
 	number = get_number(start, pwr);
-	return (count_signs(str, start) * number);
+	return (getsign(str) * number);
 }
