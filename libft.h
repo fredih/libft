@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 09:46:36 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 10:14:26 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
-int				ft_strlen(char *str);
-int				ft_strcmp(char *s1, char *s2);
+int				ft_strlen(const char *str);
+char			*ft_strchr(const char *s, int c);
 int				ft_strcmp(char *s1, char *s2);
 unsigned long	ft_strlcat(char *dest, char *src, unsigned int destsize);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n);
