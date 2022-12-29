@@ -6,20 +6,21 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 20:10:35 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/28 20:23:17 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/28 20:54:09 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *s, int c, int n)
+void	*ft_memset(void *s, int c, unsigned int n)
 {
-	int	*intptr;
-	int	i;
+	char	*charptr;
+	int		i;
 
-	intptr = (int *)s;
+	charptr = (char *)s;
 	i = 0;
 	while (i < n)
 	{
-		*(intptr + i) = c;
+		*(charptr + i) = (unsigned char)c;
+		i++;
 	}
-	return (intptr);
+	return (charptr);
 }
