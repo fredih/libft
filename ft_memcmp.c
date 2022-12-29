@@ -11,18 +11,7 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-static int	get_str_size(char *str)
-{
-	int	size;
-
-	size = 0;
-	while (str[size] != 0)
-	{
-		size++;
-	}
-	return (size);
-}
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 {
@@ -33,8 +22,8 @@ int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
 
 	if (!n)
 		return (0);
-	size1 = get_str_size(s1);
-	size2 = get_str_size(s2);
+	size1 = ft_strlen(s1);
+	size2 = ft_strlen(s2);
 	i = 0;
 	result = 0;
 	while (i <= size1 && (unsigned int)i < n)
