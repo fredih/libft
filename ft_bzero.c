@@ -6,10 +6,11 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 20:24:05 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/28 20:25:22 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/29 09:42:12 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 void	bzero(void *s, int n)
 {
