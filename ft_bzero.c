@@ -6,13 +6,14 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 20:24:05 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 15:04:26 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 09:55:07 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
-void	ft_bzero(void *s, int n)
+void	ft_bzero(void *s, size_t n)
 {
 	ft_memset(s, 0, n);
 }

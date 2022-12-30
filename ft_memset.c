@@ -6,11 +6,13 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 20:10:35 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 15:06:03 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 09:55:14 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *s, int c, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	char				*charptr;
 	unsigned int		i;
