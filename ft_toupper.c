@@ -6,11 +6,11 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 09:49:03 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 09:52:47 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:55:28 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+int	ft_toupper(int c)
 {
 	return (c - 32);
 }
