@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 14:54:11 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 15:01:35 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 #endif
