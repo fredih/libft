@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 15:24:59 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 15:26:33 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 16:34:49 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putnbr_fd(int n, int fd)
 	char	*s;
 
 	s = ft_itoa(n);
-	ft_putstr(s, fd);
+	ft_putstr_fd(s, fd);
 }
