@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 09:45:36 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:13:57 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:25:37 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 void	*calloc(size_t nmemb, size_t size)
 {
-	int		i;
 	void	*ptr;
 
 	ptr = malloc(nmemb * size);
