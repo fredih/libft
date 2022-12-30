@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:10:14 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:34:59 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 13:02:23 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	slen = ft_strlen((char *)s + start);
 	if (slen < len)
 		len = slen;
-	newstr = malloc(len + 1);
+	newstr = ft_calloc(len + 1, sizeof(char));
 	ft_strlcpy(newstr, (char *)s + start, len + 1);
 	return (newstr);
 
