@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:27:26 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:44:56 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char			*ft_strnstr(const char *big, const char *lil, unsigned int len);
 int				ft_atoi(const char *str);
 void			*calloc(size_t nmemb, size_t size);
 char			*strdup(const char *s);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
