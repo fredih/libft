@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:01:43 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:06:23 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int				tolower(int c);
 char			*ft_strnstr(const char *big, const char *lil, unsigned int len);
 int				ft_atoi(const char *str);
 void			*calloc(size_t nmemb, size_t size);
-
+char			*strdup(const char *s);
 #endif
