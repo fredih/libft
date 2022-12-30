@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 14:26:06 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:06:23 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:27:26 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 unsigned long	ft_strlcat(char *dest, char *src, unsigned int destsize);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n);
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int n);
 void			*ft_memchr(const void *s, int c, unsigned int n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *s, int c, size_t n);
@@ -38,4 +38,5 @@ char			*ft_strnstr(const char *big, const char *lil, unsigned int len);
 int				ft_atoi(const char *str);
 void			*calloc(size_t nmemb, size_t size);
 char			*strdup(const char *s);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
