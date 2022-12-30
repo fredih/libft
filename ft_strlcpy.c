@@ -10,7 +10,7 @@
 /*																			*/
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int n)
 {
 	unsigned int	i;
 	unsigned int	src_length;
