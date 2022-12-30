@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:02:00 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:06:08 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:26:08 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*strdup(const char *s)
 {
 	char	*newstr;
-	int len;
+	int		len;
 
 	len = ft_strlen(s);
 	newstr = malloc(len + 1);
