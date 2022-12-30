@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 09:45:36 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 10:03:32 by aantonio         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:13:57 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (0);
 	ft_bzero(ptr, nmemb * size);
 	return (ptr);
 }
