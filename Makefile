@@ -1,6 +1,7 @@
 SRCFOLDER := srcs
-OBJSNAMES := ft_strcmp.o ft_strlen.o
-OBJS := $(addprefix $(SRCFOLDER)/,$(OBJSNAMES))
+SRCS := $(wildcard *.c)
+OBJS := $(wildcard *.c)
+OBJS := $(OBJS:.c=.o)
 
 all: libft.a
 
@@ -19,4 +20,8 @@ fclean:
 
 re: fclean all
 
+so: 
+	gcc -nostartfiles -shared -o libft.so $(SRCS)
+
 .PHONY = all clean fclean libft.a re
+
