@@ -12,12 +12,10 @@
 
 #include <stdio.h>
 
-void	ft_memmove(void *dest, void *src, unsigned int n)
+void	*ft_memmove(void *dest, void *src, unsigned int n)
 {
 	unsigned int				i;
 
-	if (!dest || n == 0)
-		return ;
 	if ((unsigned long)dest < (unsigned long)src)
 	{
 		i = 0;
@@ -36,4 +34,5 @@ void	ft_memmove(void *dest, void *src, unsigned int n)
 			i--;
 		}
 	}
+	return (dest);
 }

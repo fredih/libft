@@ -11,35 +11,25 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
 
-static int	get_str_size(char *str)
-{
-	int	size;
 
-	size = 0;
-	while (str[size] != 0)
-	{
-		size++;
-	}
-	return (size);
-}
-
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
+int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	int	result;
-	int	size1;
-	int	size2;
-	int	i;
+	size_t	size1;
+	size_t	size2;
+	size_t	i;
 
 	if (!n)
 		return (0);
-	size1 = get_str_size(s1);
-	size2 = get_str_size(s2);
+	size1 = ft_strlen(s1);
+	size2 = ft_strlen(s2);
 	i = 0;
 	result = 0;
-	while (i <= size1 && (unsigned int)i < n)
+	while (i <= size1 && i < n)
 	{
-		result = s1[i] - s2[i];
+		result = (unsigned char)s1[i] - (unsigned char)s2[i];
 		if (result != 0 || i > size2)
 			break ;
 		i++;

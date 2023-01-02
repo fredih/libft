@@ -1,11 +1,13 @@
+NAME	:= libft.a
 SRCFOLDER := srcs
 SRCS := $(wildcard *.c)
 OBJS := $(wildcard *.c)
 OBJS := $(OBJS:.c=.o)
 
-all: libft.a
+all: $(NAME)
 
-libft.a: $(OBJS)
+
+$(NAME): $(OBJS)
 	ar rc libft.a $(OBJS)
 
 $(OBJS): %.o: %.c

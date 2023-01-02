@@ -39,6 +39,8 @@ char	**ft_split(char const *s, char c)
 	s = ft_strtrim(s, &c);
 	wordcount = count_chars(s, c) + 1;
 	result = ft_calloc(wordcount, sizeof(char *));
+	if (!result)
+		return (NULL);
 	i = 0;
 	while (i < wordcount)
 	{

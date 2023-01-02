@@ -10,20 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_memcpy(void *dest, void *src, unsigned int n)
+#include <stddef.h>
+
+void	*ft_memcpy(void *dest, void *src, unsigned int n)
 {
 	unsigned int		i;
-	char		*chardest;
-	char		*charsrc;
+	char				*chardest;
+	char				*charsrc;
 
 	chardest = (char *)dest;
 	charsrc = (char *)src;
-	if (!dest || n == 0)
-		return ;
 	i = 0;
 	while (i < n)
 	{
 		*(chardest + i) = *(charsrc + i);
 		i++;
 	}
+	return (dest);
 }
