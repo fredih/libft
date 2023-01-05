@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 11:07:49 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 11:24:32 by aantonio         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:48:33 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	end;
 	char			*newstr;
 
+	if (!set[0])
+	{
+		return (ft_strdup(s1));
+	}
+	if (!s1[0])
+	{
+		newstr = ft_calloc(1, sizeof(char));
+		return (newstr);
+	}
 	start = 0;
-	while (ft_strchr(set, s1[start]))
+	while (ft_strchr(set, s1[start]) && s1[start])
 	{
 		start++;
 	}
 	end = ft_strlen(s1);
-	while (ft_strchr(set, s1[end]))
+	while (ft_strchr(set, s1[end]) && end > start)
 	{
 		end--;
 	}

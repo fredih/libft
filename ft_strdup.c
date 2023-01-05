@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:02:00 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 14:55:16 by aantonio         ###   ########.fr       */
+/*   Updated: 2023/01/05 16:51:11 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strdup(const char *s)
 	newstr = ft_calloc(len + 1, sizeof(char));
 	if (!newstr)
 		return (0);
-	ft_strlcpy(newstr, s, len);
+	ft_strlcpy(newstr, s, len + 1);
 	return (newstr);
 }
