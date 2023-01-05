@@ -6,48 +6,52 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 13:37:02 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/30 14:36:59 by aantonio         ###   ########.fr       */
+/*   Updated: 2023/01/05 13:44:35 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	abs(int n)
+static unsigned int	absval(int n)
 {
-	if (n < 0)
-		return (n * -1);
-	return (n);
+	unsigned int	unsigned_n;
+
+	if (n >= 0)
+	{
+		unsigned_n = (unsigned int)n;
+	}
+	else
+	{
+		unsigned_n = (unsigned int)(-(n + 1)) + 1;
+	}
+	return (unsigned_n);
 }
 
 static int	get_int_size(int number)
 {
-	int	size;
+	unsigned int	size;
+	unsigned int	unsigned_n;
 
 	size = 0;
 	if (number == 0)
 	{
 		return (1);
 	}
-	if (number < 0)
+	unsigned_n = absval(number);
+	while (unsigned_n > 0)
 	{
-		number = number * -1;
-	}
-	while (number > 0)
-	{
-		number = number / 10;
+		unsigned_n = unsigned_n / 10;
 		size++;
 	}
 	return (size);
 }
 
-
-
 char	*ft_itoa(int n)
 {
-	int		i;
-	int		size;
-	int		remainder;
-	char	*result;
+	int					i;
+	int					size;
+	unsigned int		remainder;
+	char				*result;
 
 	size = get_int_size(n);
 	result = ft_calloc(size + 1 + (n < 0), sizeof(char));
@@ -60,11 +64,10 @@ char	*ft_itoa(int n)
 	i = 0;
 	while (i < size)
 	{
-		remainder = abs(n) % 10;
+		remainder = absval(n) % 10;
 		result[size - 1 - i + (n < 0)] = remainder + '0';
 		n = n / 10;
 		i++;
 	}
 	return (result);
 }
-
