@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	newstr = ft_calloc(s1len + s2len, sizeof(char));
+	newstr = ft_calloc(s1len + s2len + 1, sizeof(char));
 	if (!newstr)
 		return (0);
 	i = 0;
@@ -38,5 +38,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		newstr[s1len + i] = s2[i];
 		i++;
 	}
+	newstr[s1len + i] = '\0';
 	return (newstr);
 }
