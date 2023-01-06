@@ -10,9 +10,9 @@
                 "-Werror",
                 "-Wextra",
                 "-g",
-                "-fsanitize=address",
-                "${fileDirname}/*.c",
-                "${fileDirname}/libft.h",
+                "${file}",
+                "${fileDirname}/../*.c",
+                "${fileDirname}/../libft.h",
 
                 // "../*.c"
                 "-o",
