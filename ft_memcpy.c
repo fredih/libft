@@ -12,12 +12,14 @@
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *dest, void *src, unsigned int n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int		i;
+	size_t		i;
 	char				*chardest;
 	char				*charsrc;
 
+	if(n > 0 && !src && !dest)
+		return (dest);
 	chardest = (char *)dest;
 	charsrc = (char *)src;
 	i = 0;
