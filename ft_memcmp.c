@@ -13,23 +13,19 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, unsigned int n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int	result;
-	int	size1;
-	int	size2;
-	int	i;
+	size_t	i;
 
 	if (!n)
 		return (0);
-	size1 = ft_strlen(s1);
-	size2 = ft_strlen(s2);
 	i = 0;
 	result = 0;
-	while (i <= size1 && (unsigned int)i < n)
+	while ((unsigned int)i < n)
 	{
-		result = ((char *)s1)[i] - ((char *)s2)[i];
-		if (result != 0 || i > size2)
+		result = ((unsigned char *)s1)[i] - ((unsigned char *)s2)[i];
+		if (result != 0)
 			break ;
 		i++;
 	}
