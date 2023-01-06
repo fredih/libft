@@ -13,10 +13,9 @@
 #include <stdio.h>
 #include "libft.h"
 
-
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
-	int	result;
+	int		result;
 	size_t	size1;
 	size_t	size2;
 	size_t	i;
