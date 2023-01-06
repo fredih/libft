@@ -67,7 +67,7 @@ int	getsign(const char *str)
 	{
 		i++;
 	}
-	if (str[i] == '-')
+	if (str[i - 1] == '-')
 		return (-1);
 	else
 		return (1);
@@ -83,10 +83,12 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	while (ft_isspace(str[i]))
-	{
 		i++;
-	}
 	if (str[i] == '-' || str[i] == '+')
+		i++;
+	if (!('0' <= str[i] && str[i] <= '9'))
+		return (0);
+	while ('0' == str[i] && str[i + 1] == '0')
 		i++;
 	start = (char *)str + i;
 	i++;
