@@ -29,23 +29,14 @@ static int	count_chars(char const*s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**get_result(char *trimmed, char c)
 {
 	char	**result;
 	int		wordcount;
 	char	*end;
 	char	*words;
-	char	*trimmed;
 	int		i;
 
-	if (!s)
-		return (0);
-	trimmed = ft_strtrim(s, &c);
-	if (!s[0])
-	{
-		result = ft_calloc(1, sizeof(char *));
-		return (result);
-	}
 	wordcount = count_chars(trimmed, c) + 1;
 	result = ft_calloc(wordcount + 1, sizeof(char *));
 	if (!result)
@@ -63,6 +54,31 @@ char	**ft_split(char const *s, char c)
 		words = end;
 	}
 	result[i] = ft_substr(words, 0, ft_strlen(words));
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+	char	*trimmed;
+
+	if (!s)
+		return (0);
+	trimmed = ft_strtrim(s, &c);
+	if (!trimmed[0])
+	{
+		result = ft_calloc(1, sizeof(char *));
+		free(trimmed);
+		return (result);
+	}
+	if (!ft_strchr(trimmed, c) || *ft_strchr(trimmed, c) == '\0')
+	{
+		result = ft_calloc(2, sizeof(char *));
+		result[0] = ft_strdup(trimmed);
+		free(trimmed);
+		return (result);
+	}
+	result = get_result(trimmed, c);
 	free(trimmed);
 	return (result);
 }
