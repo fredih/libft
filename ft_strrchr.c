@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 10:01:58 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 14:59:05 by aantonio         ###   ########.fr       */
+/*   Updated: 2023/01/06 23:26:32 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(const char *s, int c)
 	i = ft_strlen(s);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)s + i);
 		i--;
 	}
