@@ -6,12 +6,14 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 12:13:44 by aantonio          #+#    #+#             */
-/*   Updated: 2023/01/05 17:27:29 by aantonio         ###   ########.fr       */
+/*   Updated: 2023/01/06 23:23:32 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <unistd.h>
+#include <stdio.h>
 
 static int	count_chars(char const*s, char c)
 {
@@ -57,6 +59,31 @@ static char	**get_result(char *trimmed, char c)
 	return (result);
 }
 
+static char	*trimchar(char const *s1, char c)
+{
+	unsigned int	start;
+	unsigned int	end;
+	char			*newstr;
+
+	if (!s1[0])
+	{
+		return (ft_strdup(s1));
+	}
+	start = 0;
+	while (c == s1[start] && s1[start])
+	{
+		start++;
+	}
+	end = ft_strlen(s1) - 1;
+	while (c == s1[end] && end > start)
+	{
+		end--;
+	}
+	newstr = ft_substr(s1, start, end - start + 1);
+	return (newstr);
+}
+
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
@@ -64,16 +91,20 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	trimmed = ft_strtrim(s, &c);
+	trimmed = trimchar(s, c);
 	if (!trimmed[0])
 	{
 		result = ft_calloc(1, sizeof(char *));
+		if (!result)
+			return (NULL);
 		free(trimmed);
 		return (result);
 	}
 	if (!ft_strchr(trimmed, c) || *ft_strchr(trimmed, c) == '\0')
 	{
 		result = ft_calloc(2, sizeof(char *));
+		if (!result)
+			return (NULL);
 		result[0] = ft_strdup(trimmed);
 		free(trimmed);
 		return (result);
@@ -82,3 +113,23 @@ char	**ft_split(char const *s, char c)
 	free(trimmed);
 	return (result);
 }
+
+// int main(void)
+// {
+// 	char *s = "      split       this for   me  !       ";
+// 		write(1, "result began\n", 14);
+ 
+// 	char **result = ft_split(s, ' ');
+// 	if (!result)
+// 		write(1, "result failed\n", 15);
+// 	for(int i = 0; result[i]; i++){
+// 		ft_putnbr_fd(i, 1);
+// 		ft_putstr_fd(": ",1);
+// 		ft_putchar_fd('\n',1);
+// 		ft_putstr_fd(result[i],1);
+// 		ft_putchar_fd('\n',1);
+// 		free(result[i]);
+// 		}
+
+// 	return(0);
+// }
