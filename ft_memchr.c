@@ -6,7 +6,7 @@
 /*   By: aantonio <aantonio@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 10:01:58 by aantonio          #+#    #+#             */
-/*   Updated: 2022/12/29 15:33:38 by aantonio         ###   ########.fr       */
+/*   Updated: 2023/01/06 21:32:45 by aantonio         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memchr(const void *s, int c, unsigned int n)
 	i = 0;
 	while (i < n)
 	{
-		if (((char *)s)[i] == c)
-			return ((char *)s + i);
+		if (((unsigned char *)s)[i] == (unsigned char)c)
+			return (((char *)s + i));
 		i++;
 	}
 	return (0);
